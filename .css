@@ -5,7 +5,7 @@
 }
 
 img {
-    max-width: 100%;    /* Não deixa a imagem vazar da tela */
+    max-width: 70%;    /* Não deixa a imagem vazar da tela */
     height: auto;       /* Mantém a proporção */
     display: block;     /* Remove espaços vazios abaixo da imagem */
     border: 0;          /* Remove bordas automáticas de links em navegadores antigos */
