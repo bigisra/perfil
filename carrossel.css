@@ -1,60 +1,52 @@
-/* Container que limita a visualização */
-.carousel {
-    width: 100%;
+.thumbnail-carousel {
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
-    padding: 20px 0;
+    padding: 10px 0;
+    /* Suaviza o scroll no Android */
+    scroll-snap-type: x proximity; 
+    -webkit-overflow-scrolling: touch;
 }
 
-/* O trilho que desliza */
-.carousel-inner {
+.thumbnail-track {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory; /* Força a imagem a travar no centro */
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Suavidade extrema no Android/iOS */
-    gap: 15px;
-    padding: 0 10px;
+    gap: 10px; /* Espaço entre as miniaturas */
+    padding: 0 15px;
 }
 
-/* Esconde a barra de rolagem mas mantém a função */
-.carousel-inner::-webkit-scrollbar {
+.thumb-item {
+    flex: 0 0 120px; /* Largura fixa da miniatura no celular */
+    scroll-snap-align: start;
+}
+
+.thumb-item img {
+    width: 100%;
+    height: 80px; /* Altura reduzida para parecer miniatura */
+    object-fit: cover; /* Corta a imagem para preencher o retângulo */
+    border-radius: 6px;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efeito de destaque ao interagir */
+.thumb-item img:active, 
+.thumb-item img:hover {
+    border-color: #007bff;
+    transform: scale(1.05);
+}
+
+/* Esconder barra de rolagem para um visual mais limpo */
+.thumbnail-carousel::-webkit-scrollbar {
     display: none;
 }
 
-/* Cada card de certificado */
-.carousel-item {
-    flex: 0 0 85%; /* No celular, mostra 85% da imagem e um pedaço da próxima */
-    scroll-snap-align: center;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    display: flex;
-    flex-direction: column;
-}
-
-/* Imagem responsiva e centralizada */
-.carousel-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: contain; /* Garante que o certificado apareça inteiro sem cortes */
-    background: #f8f8f8;
-    border-radius: 12px 12px 0 0;
-}
-
-/* Legenda abaixo da imagem */
-.caption {
-    padding: 15px;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 14px;
-    color: #333;
-}
-
-/* Ajustes para telas maiores (PC) */
+/* No computador, as miniaturas podem ser um pouco maiores */
 @media (min-width: 768px) {
-    .carousel-item {
-        flex: 0 0 45%; /* No PC, mostra duas imagens por vez */
+    .thumb-item {
+        flex: 0 0 150px;
+    }
+    .thumb-item img {
+        height: 100px;
     }
 }
