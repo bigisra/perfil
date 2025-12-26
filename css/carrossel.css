@@ -1,5 +1,5 @@
 .thumbnail-carousel {
-    max-width: 800px;
+    max-width: 200px;
     margin: 0 auto;
     overflow: hidden;
     padding: 10px 0;
@@ -20,7 +20,7 @@
 }
 
 .thumb-item img {
-    width: 100%;
+    width: 30%;
     height: 80px; /* Altura reduzida para parecer miniatura */
     object-fit: cover; /* Corta a imagem para preencher o retângulo */
     border-radius: 6px;
@@ -42,11 +42,11 @@
 }
 
 /* No computador, as miniaturas podem ser um pouco maiores */
-@media (min-width: 768px) {
+@media (min-width: 468px) {
     .thumb-item {
         flex: 0 0 150px;
     }
     .thumb-item img {
-        height: 100px;
+        height: 50px;
     }
 }
