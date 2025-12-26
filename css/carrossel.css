@@ -1,5 +1,5 @@
 .thumbnail-carousel {
-    max-width: 200px;
+    max-width: 80px;
     margin: 0 auto;
     overflow: hidden;
     padding: 10px 0;
@@ -20,8 +20,8 @@
 }
 
 .thumb-item img {
-    width: 30%;
-    height: 80px; /* Altura reduzida para parecer miniatura */
+    width: 10%;
+    height: 50px; /* Altura reduzida para parecer miniatura */
     object-fit: cover; /* Corta a imagem para preencher o retângulo */
     border-radius: 6px;
     border: 2px solid #ddd;
@@ -42,9 +42,9 @@
 }
 
 /* No computador, as miniaturas podem ser um pouco maiores */
-@media (min-width: 468px) {
+@media (min-width: 80px) {
     .thumb-item {
-        flex: 0 0 150px;
+        flex: 0 0 50px;
     }
     .thumb-item img {
         height: 50px;
