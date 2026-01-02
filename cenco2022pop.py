@@ -15,6 +15,7 @@ try:
     print("\n--- TABELA CARREGADA ---")
     print(df.head(20)) # Mostra as primeiras 20 linhas
     print(f"\nTotal de registros: {len(df)}")
+    
 
 except Exception as e:
     print(f"Erro: Certifique-se de que o link é público. Detalhes: {e}")
