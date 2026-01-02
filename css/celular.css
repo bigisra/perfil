@@ -1,0 +1,28 @@
+img {
+    max-width: 100%;    /* Nunca ultrapassa a largura da tela */
+    height: auto;       /* Mantém a proporção (não achata) */
+    display: block;     /* Evita espaços indesejados */
+    margin: 0 auto;     /* Centraliza a imagem se ela for pequena */
+}
+
+/* Configuração para Celulares (telas de até 768px) */
+@media (max-width: 768px) {
+    .sua-imagem {
+        width: 90%;      /* Ocupa quase a tela toda no celular */
+        border-radius: 10px; /* Adiciona bordas arredondadas apenas no celular */
+    }
+}
+
+.botao-link {
+  display: inline-block; /* Permite definir padding e margem */
+  padding: 10px 20px;
+  background-color: #007bff; /* Cor de fundo azul */
+  color: white; /* Cor do texto branco */
+  text-decoration: none; /* Remove o sublinhado padrão do link */
+  border-radius: 5px; /* Cantos arredondados */
+  text-align: center;
+}
+
+.botao-link:hover {
+  background-color: #0056b3; /* Cor ligeiramente mais escura ao passar o mouse */
+}
