@@ -212,4 +212,65 @@
                               
             </section>
 
-            
+            <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Censo 2022 - Visualizador</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 30px; background-color: #f4f7f6; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        #tabela-saida { margin-top: 20px; }
+        /* Estilo para a tabela gerada pelo Pandas */
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th { background-color: #3498db; color: white; padding: 10px; }
+        td { padding: 8px; border: 1px solid #ddd; text-align: center; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+    </style>
+</head>
+
+    <div class="container">
+        <h1>📊 Dados: População por Cor ou Raça (2022)</h1>
+        <p>Aguarde enquanto o Python processa os dados do IBGE...</p>
+        
+        <div id="tabela-saida"></div>
+    </div>
+
+    <py-config>
+        packages = ["pandas", "openpyxl", "ssl"]
+    </py-config>
+
+    <py-script>
+        import pandas as pd
+        from pyscript import display
+        import js
+
+        # Link ajustado para tentar o download direto
+        url = 'https://fatecspgov-my.sharepoint.com/:x:/r/personal/israel_barros_fatec_sp_gov_br/Documents/Tabela_04_Pop_resid_por_cor_ou_raca_e_pessoas_indigenas_2022_MU%201.xlsx?download=1'
+
+        async def carregar_dados():
+            try:
+                # Lendo o arquivo Excel do link
+                df = pd.read_excel(url)
+                
+                # Exibindo apenas as primeiras 20 linhas para não travar o navegador
+                display(df.head(20), target="tabela-saida")
+                
+                # Remove a mensagem de carregamento
+                js.document.querySelector("p").innerText = "Dados carregados com sucesso!"
+            except Exception as e:
+                display(f"Erro ao acessar o arquivo: {e}", target="tabela-saida")
+                print(f"Erro detalhado: {e}")
+
+        # Executa a função
+        carregar_dados()
+    </py-script>
+
+
+</html>
