@@ -13,16 +13,3 @@ img {
     }
 }
 
-.botao-link {
-  display: inline-block; /* Permite definir padding e margem */
-  padding: 10px 20px;
-  background-color: #007bff; /* Cor de fundo azul */
-  color: white; /* Cor do texto branco */
-  text-decoration: none; /* Remove o sublinhado padrão do link */
-  border-radius: 10px; /* Cantos arredondados */
-  text-align: center;
-}
-
-.botao-link:hover {
-  background-color: #40977a; /* Cor ligeiramente mais escura ao passar o mouse */
-}
