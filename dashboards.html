@@ -238,39 +238,12 @@
     <div class="container">
         <h1>📊 Dados: População por Cor ou Raça (2022)</h1>
         <p>Aguarde enquanto o Python processa os dados do IBGE...</p>
+
+        <iframe src="cenco2022pop.py" width="100%" height="500px"></iframe>
         
         <div id="tabela-saida"></div>
     </div>
 
-    <py-config>
-        packages = ["pandas", "openpyxl", "ssl"]
-    </py-config>
-
-    <py-script>
-        import pandas as pd
-        from pyscript import display
-        import js
-
-        # Link ajustado para tentar o download direto
-        url = 'https://fatecspgov-my.sharepoint.com/:x:/r/personal/israel_barros_fatec_sp_gov_br/Documents/Tabela_04_Pop_resid_por_cor_ou_raca_e_pessoas_indigenas_2022_MU%201.xlsx?download=1'
-
-        async def carregar_dados():
-            try:
-                # Lendo o arquivo Excel do link
-                df = pd.read_excel(url)
-                
-                # Exibindo apenas as primeiras 20 linhas para não travar o navegador
-                display(df.head(20), target="tabela-saida")
-                
-                # Remove a mensagem de carregamento
-                js.document.querySelector("p").innerText = "Dados carregados com sucesso!"
-            except Exception as e:
-                display(f"Erro ao acessar o arquivo: {e}", target="tabela-saida")
-                print(f"Erro detalhado: {e}")
-
-        # Executa a função
-        carregar_dados()
-    </py-script>
-
+    
 
 </html>
