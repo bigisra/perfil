@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Perfil Profissional </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bege-fundo: #f5f2ed; /* Bege areia bem clarinho */
+            --bege-card: #ffffff;
+            --verde-primario: #3d5a44; /* Verde Oliva sofisticado */
+            --verde-claro: #e9ede9;
+            --texto-dark: #2d3436;
+            --texto-light: #636e72;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bege-fundo);
+            color: var(--texto-dark);
+        }
+
+        /* Navbar elegante */
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 12px 30px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--texto-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--verde-primario);
+        }
+
+        /* Hero Section */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+        }
+
+        .profile-card {
+            background: var(--bege-card);
+            border-radius: 30px;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 25px;
+            object-fit: cover;
+            background-color: var(--verde-claro);
+            transform: rotate(-3deg);
+            transition: 0.3s;
+        }
+
+        .profile-card:hover .profile-img {
+            transform: rotate(0deg);
+        }
+
+        .profile-info h1 {
+            font-size: 2.8rem;
+            color: var(--verde-primario);
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .profile-info p {
+            color: var(--texto-light);
+            font-size: 1.1rem;
+        }
+
+        /* Seções de Conteúdo */
+        .grid-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+        }
+
+        section {
+            background: var(--bege-card);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--verde-primario);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Habilidades Style */
+        .skills-tag {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: var(--verde-claro);
+            color: var(--verde-primario);
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            background: var(--verde-primario);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-contact:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(61, 90, 68, 0.2);
+        }
+
+        /* Responsividade */
+        @media (max-width: 850px) {
+            .profile-card { flex-direction: column; text-align: center; padding: 30px; }
+            .grid-content { grid-template-columns: 1fr; }
+            .profile-img { transform: rotate(0); width: 150px; height: 150px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+            <div style="display: flex; gap: 20px;">
+            <a href="#Racismo">Racismo</a>
+                </div>
+    </nav>
+
+    <div class="container">
+        <header class="profile-card">
+            <img src="https://fatecspgov-my.sharepoint.com/personal/israel_barros_fatec_sp_gov_br/Documents/foto.jpg"  title="foto" alt="Minha foto" class="profile-img">
+            <div class="profile-info">
+                <p style="font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; margin-bottom: 10px;">Acompanhe aqui um pouco sobre mim</p>
+                <h1>Olá, eu sou<br>Israel Barros.</h1>
+                <p>Harvard ALP Alumni ‘25 | Aspirante a Data Scientist | Análise de Dados e IA aplicada | Especialista técnico de Gestão de Projetos | Pesquisador em formação</p>
+                <a href="#contato" class="btn-contact">Vamos conversar?</a>
+            </div>
+        </header>
+
+        <div class="grid-content">
+            <section id="sobre">
+                <h2>Sobre Mim</h2>
+                <p style="color: var(--texto-light); margin-bottom: 20px;">
+                    <p> Sou estudante de Ciência de Dados e especialista técnico em Gestão de Projetos pelo Centro Paula Souza, com formações pela FATEC Jundiaí e ETEC 			CEPAM, instituição referência em Gestão Pública.<p/>
+			<br>
+
+ 	<p> Atualmente, estou expandindo minhas competências em infraestrutura de TI, cursando a Escola de Nuvem para obter a certificação AWS Cloud, buscando aliar a 		análise de dados com a escalabilidade da computação em nuvem.<p/>
+		<br>
+	<p> Acredito que a união entre dados, gestão e responsabilidade social é o caminho para criar soluções sustentáveis e reduzir desigualdades. Tenho como 		propósito crescer profissionalmente contribuindo com análises que gerem valor real para pessoas e instituições.<p/>
+		<br>
+
+
+                </p>
+               
+            </section>
+
+            <section id="trabalho">
+                <h2>Habilidades</h2>
+                <div class="skills-tag">
+                    
+                    <span class="tag">PYTHON</span>
+                    <span class="tag">HTML5 / CSS3</span>
+                    <span class="tag">GESTÃO DE PROJETOS</span>
+                    <span class="tag">CLOUD</span>
+                    <span class="tag">CLICKUP</span>
+                    <span class="tag">DAX</span>
+                    <span class="tag">IA</span>
+
+                </div>
+            </section>
+
+
+    <section id="Formacoes">
+        <h2>Formações</h2>
+        <p style="color: var(--texto-light); margin-bottom: 20px;">
+<div>
+<strong> Curso Superior de Tecnologia (CST) - FATEC JUNDIAÍ - FATEC Jundiaí </strong>
+<p> Março de 2025 - Março de 2028 </p>
+
+</div>
+
+            </section>
+
+
+            <section id="pesquisas">
+  
+    <h2>Pesquisas</h2>
+    <p style="color: var(--texto-light); margin-bottom: 20px;"></p>
+<div>
+
+        <p> RACISMO, PRECONCEITO OU VIOLÊNCIA PSICOLÓGICA E FÍSICA: A MARGEM JURÍDICA E DADOS REPRESENTATIVOS NO BRASIL.   </p>
+
+            <a href="https://fatecspgov-my.sharepoint.com/:b:/r/personal/israel_barros_fatec_sp_gov_br/Documents/Trabalho%20acad%C3%AAmico%20-%20Racismo%20n%C3%A3o%20%C3%A9%20preconceito!%20ASSINATURA%20GOV.pdf?csf=1&web=1&e=dLLf4l" download>
+  Clique para baixar o arquivo </a>
+
+</div>
+
+</section>
+                
+       <section id="certificacoes">
+
+        <h2>Certificações</h2>
+        <p style="color: var(--texto-light); margin-bottom: 20px;">
+
+        <div>
+<ul>
+  <li>Python essentials 1 / Cisco Networking Academy</li>
+  <li>Especialização Técnica em Gestão de Projetos / ETEC CEPAM</li>
+  <li>Artificial Intelligence Fundamentals with Capstone Project / IBM</li>
+</ul>
+
+</div>
+      
+</section>
+
+ <section id="formulario">
+   <h2>Contato</h2>
+        <p style="color: var(--texto-light); margin-bottom: 20px;">
+<div>
+<iframe width="640px" height="480px" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?								id=veJyzyt6g0e96znVewf3b4DlQKuDNHhHvd9OJEMolGtUNkxRUERaWE9JQ0VZNDhORk5GTk9QNjQ3RS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" 		style="border:none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+</div>
+</section>
+        <footer id="contato" style="text-align: center; padding: 60px 0;">
+            <p style="color: var(--texto-light);">Entre em contato para uma conversa</p>
+            <div style="margin-top: 20px;">
+                <a href="https://www.linkedin.com/in/israel-barros-44a453308/" style="color: var(--verde-primario); font-weight: 700; text-decoration: none; margin: 0 10px;">LinkedIn</a>
+                <a href="https://www.instagram.com/grandisra/" style="color: var(--verde-primario); font-weight: 700; text-decoration: none; margin: 0 10px;">Instagram</a>
+                <a href="https://github.com/bigisra" style="color: var(--verde-primario); font-weight: 700; text-decoration: none; margin: 0 10px;">GitHub</a>
+            </div>
+        </footer>
+    </div>
+
+     <!-- Link para o JavaScript do Bootstrap (CDN) - antes de </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
