@@ -271,6 +271,23 @@ dados = {
 
 df = pd.DataFrame(dados)
 display(df, target="tabela")
+
+
+html = "<table><tr>"
+for col in dados:
+    html += f"<th>{col}</th>"
+html += "</tr>"
+
+for i in range(len(dados["Anos"])):
+    html += "<tr>"
+    for col in dados:
+        html += f"<td>{dados[col][i]}</td>"
+    html += "</tr>"
+
+html += "</table>"
+
+from js import document
+document.getElementById("tabela").innerHTML = html
 </py-script>
 
     </div>
