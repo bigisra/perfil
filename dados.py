@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd 
+import os
 
 # Título da página
 st.title("Distribuição Percentual da População por Cor ou Raça (1872 – 2000)")
@@ -29,3 +30,9 @@ df = pd.DataFrame(dados)
 df.to_html('pop.html', index=False)
 print("Arquivo pop.html gerado com sucesso!")
 
+# Pega o diretório onde o dados.py está guardado
+diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+caminho_final = os.path.join(diretorio_atual, 'pop.html')
+
+df.to_html(caminho_final, index=False)
+print(f"Arquivo salvo em: {caminho_final}")
