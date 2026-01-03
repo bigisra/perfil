@@ -28,3 +28,4 @@ for i in range(len(dados['Anos'])):
 df = pd.DataFrame(dados)
 df.to_html('pop.html', index=False)
 print("Arquivo pop.html gerado com sucesso!")
+
