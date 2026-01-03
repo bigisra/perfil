@@ -18,5 +18,7 @@ for i in range(len(dados['Anos'])):
     # Exibe os dados centralizados e com 1 casa decimal
     print(f"{ano:^6} | {branca:^12.1f} | {negra:^12.1f}")
     
+    
+    
 
 
