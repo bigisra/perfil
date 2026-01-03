@@ -1,5 +1,8 @@
+import streamlit as st
 import pandas as pd 
 
+# Título da página
+st.title("Distribuição Percentual da População por Cor ou Raça (1872 – 2000)")
 
 dados = {
     'Anos': [1872, 1890, 1940, 1950, 1960, 1980, 1991, 2000],
