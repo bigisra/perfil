@@ -25,4 +25,6 @@ for i in range(len(dados['Anos'])):
     
     df = pd.DataFrame(dados)
     
-    html_tabela = df.to_html(index=False, classes='tabela-populacao')
+df = pd.DataFrame(dados)
+df.to_html('pop.html', index=False)
+print("Arquivo pop.html gerado com sucesso!")
