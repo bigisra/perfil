@@ -252,12 +252,14 @@
       
                     <h2>Distribuição da população por raça (%)</h2>
 
-                    <script>
-
-                        
-fetch("http://localhost:8000/dados")
-  .then(r => r.json())
-  .then(d => console.log(d.msg))
+                   <script>
+  fetch("http://127.0.0.1:8000/dados")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("resultado").innerText =
+        `Olá ${data.nome} - ${data.area} (${data.status})`;
+    })
+    .catch(err => console.error(err));
 </script>
 
 </section>
