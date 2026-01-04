@@ -193,6 +193,17 @@
         }
     </style>
 
+    <style>
+        
+  iframe {
+    display: block; /* Importante para que margin auto funcione */
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* Defina uma largura para o iframe */
+    height: 400px;
+  }
+</style>
+
   
 </head>
 <body>
@@ -246,8 +257,6 @@
                      
                 </div>
             <div id="tabela-populacao"></div>
-      
-                    <h2>Distribuição da população por raça (%)</h2>
 
                    <iframe 
     src="http://127.0.0.1:8000/tabela"
@@ -267,6 +276,7 @@
             <a href="racismtrabalho.pdf">Clique aqui para baixar.</a>
         </iframe>
         
+
   </div>
      
 </body>
