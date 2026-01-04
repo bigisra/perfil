@@ -194,8 +194,8 @@
     </style>
 
     
-    <link rel="stylesheet" href="pyscript.net" />
-    <script type="module" src="pyscript.net"></script>
+    <link rel="stylesheet" href="pyscript.js" />
+    <script type="module" src="pyscript.js"></script>
 
 
 </head>
@@ -250,11 +250,11 @@
                      
                 </div>
 
-            <<div id="tabela-populacao">
+            
                 <section>
-       <div id="tabela-populacao">
-
-        <h2>Distribuição da população por raça (%)</h2>
+                    <div id="tabela-populacao"></div>
+      
+                    <h2>Distribuição da população por raça (%)</h2>
 
 <div id="tabela"></div>
 
@@ -270,8 +270,6 @@ dados = {
 }
 
 df = pd.DataFrame(dados)
-display(df, target="tabela")
-
 
 html = "<table><tr>"
 for col in dados:
