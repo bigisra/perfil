@@ -1,18 +1,17 @@
+import pandas as pd
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
-@app.get("/")
-def root():
-    return {"status": "API rodando"}
-
-@app.get("/tabela")
+@app.get("/tabela", response_class=HTMLResponse)
 def tabela():
-    return {
+    dados = {
         "Anos": [1872, 1890, 1940, 1950, 1960, 1980, 1991, 2000],
         "Branca (%)": [58.0, 44.0, 35.8, 37.5, 38.2, 44.8, 47.5, 44.7],
         "Negra (%)": [38.1, 47.0, 63.5, 61.7, 61.1, 54.2, 51.6, 53.7]
     }
+
     df = pd.DataFrame(dados)
 
     tabela_html = df.to_html(
