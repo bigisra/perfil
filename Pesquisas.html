@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+       <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <meta charset="UTF-8">
 
@@ -193,10 +193,7 @@
         }
     </style>
 
-    
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
-
+  
 </head>
 <body>
 
@@ -255,39 +252,6 @@
       
                     <h2>Distribuição da população por raça (%)</h2>
 
-<div id="tabela"></div>
-
-
-<py-script>
-import pandas as pd
-from pyscript import display
-
-dados = {
-    'Anos': [1872, 1890, 1940, 1950, 1960, 1980, 1991, 2000],
-    'Branca (%)': [58.0, 44.0, 35.8, 37.5, 38.2, 44.8, 47.5, 44.7],
-    'Negra (%)': [38.1, 47.0, 63.5, 61.7, 61.1, 54.2, 51.6, 53.7]
-}
-
-df = pd.DataFrame(dados)
-
-html = "<table><tr>"
-for col in dados:
-    html += f"<th>{col}</th>"
-html += "</tr>"
-
-for i in range(len(dados["Anos"])):
-    html += "<tr>"
-    for col in dados:
-        html += f"<td>{dados[col][i]}</td>"
-    html += "</tr>"
-
-html += "</table>"
-
-from js import document
-document.getElementById("tabela").innerHTML = html
-</py-script>
-
-    </div>
 
 </section>
 
