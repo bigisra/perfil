@@ -52,7 +52,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             z-index: 1000;
             border: 1px solid rgba(255,255,255,0.3);        
-            gap: 20px;              /* espaço entre os links */
           
             
     }
@@ -283,6 +282,26 @@
         
 
   </div>
+
+  <script>
+    let lastScrollTop = 0;
+    const nav = document.querySelector("nav");
+
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // descendo
+            nav.style.top = "-100px";
+        } else {
+            // subindo
+            nav.style.top = "20px";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+</script>
+
      
 </body>
 
