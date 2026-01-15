@@ -26,12 +26,15 @@
 
     <title> Perfil Profissional </title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            --bege-fundo: #f5f2ed; /* Bege areia bem clarinho */
+            --bege-fundo: #f5f2ed;
+            /* Bege areia bem clarinho */
             --bege-card: #ffffff;
-            --verde-primario: #3d5a44; /* Verde Oliva sofisticado */
+            --verde-primario: #3d5a44;
+            /* Verde Oliva sofisticado */
             --verde-claro: #e9ede9;
             --texto-dark: #2d3436;
             --texto-light: #636e72;
@@ -63,14 +66,11 @@
             padding: 12px 30px;
             border-radius: 100px;
             display: flex;
-            justify-content: center; /* centraliza horizontal */
+            justify-content: space-between;
             align-items: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             z-index: 1000;
-            border: 1px solid rgba(255,255,255,0.3);        
-          
-            
-   
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         nav a {
@@ -99,7 +99,7 @@
             display: flex;
             align-items: center;
             gap: 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.02);
             margin-bottom: 30px;
         }
 
@@ -140,7 +140,7 @@
             background: var(--bege-card);
             padding: 40px;
             border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.02);
         }
 
         h2 {
@@ -187,30 +187,48 @@
 
         /* Responsividade */
         @media (max-width: 850px) {
-            .profile-card { flex-direction: column; text-align: center; padding: 30px; }
-            .grid-content { grid-template-columns: 1fr; }
-            .profile-img { transform: rotate(0); width: 150px; height: 150px; }
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .grid-content {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-img {
+                transform: rotate(0);
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <nav>
-            <div style="display: flex; gap: 20px;">
+        <div style="display: flex; gap: 20px;">
             <a href="#sobre">Sobre</a>
             <a href="#trabalho">Habilidades</a>
             <a href="#contato">Contato</a>
             <a href="#certificacoes">Certificações</a>
-            </div>
+        </div>
     </nav>
+
 
     <div class="container">
         <header class="profile-card">
-            <img src="https://fatecspgov-my.sharepoint.com/personal/israel_barros_fatec_sp_gov_br/Documents/foto.jpg"  title="foto" alt="Minha foto" class="profile-img">
+            <img src="https://fatecspgov-my.sharepoint.com/personal/israel_barros_fatec_sp_gov_br/Documents/foto.jpg"
+                title="foto" alt="Minha foto" class="profile-img">
             <div class="profile-info">
-                <p style="font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; margin-bottom: 10px;">Acompanhe aqui um pouco sobre mim</p>
+                <p
+                    style="font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; margin-bottom: 10px;">
+                    Acompanhe aqui um pouco sobre mim</p>
                 <h1>Olá, eu sou<br>Israel Barros.</h1>
-                <p>Harvard ALP Alumni ‘25 | Aspirante a Data Scientist | Análise de Dados e IA aplicada | Especialista técnico de Gestão de Projetos | Pesquisador em formação</p>
+                <p>Harvard ALP Alumni ‘25 | Aspirante a Data Scientist | Análise de Dados e IA aplicada | Especialista
+                    técnico de Gestão de Projetos | Pesquisador em formação</p>
                 <a href="#contato" class="btn-contact">Vamos conversar?</a>
             </div>
         </header>
@@ -219,23 +237,31 @@
             <section id="sobre">
                 <h2>Sobre Mim</h2>
                 <p style="color: var(--texto-light); margin-bottom: 20px;">
-                    <p> Sou estudante de Ciência de Dados e especialista técnico em Gestão de Projetos pelo Centro Paula Souza, com formações pela FATEC Jundiaí e ETEC 			CEPAM, instituição referência em Gestão Pública.<p/>
-			<br>
+                <p> Sou estudante de Ciência de Dados e especialista técnico em Gestão de Projetos pelo Centro Paula
+                    Souza, com formações pela FATEC Jundiaí e ETEC CEPAM, instituição referência em Gestão Pública.
+                </p>
+                    <br>
 
- 	<p> Atualmente, estou expandindo minhas competências em infraestrutura de TI, cursando a Escola de Nuvem para obter a certificação AWS Cloud, buscando aliar a 		análise de dados com a escalabilidade da computação em nuvem.<p/>
-		<br>
-	<p> Acredito que a união entre dados, gestão e responsabilidade social é o caminho para criar soluções sustentáveis e reduzir desigualdades. Tenho como 		propósito crescer profissionalmente contribuindo com análises que gerem valor real para pessoas e instituições.<p/>
-		<br>
+                <p> Atualmente, estou expandindo minhas competências em infraestrutura de TI, cursando a Escola de Nuvem
+                    para obter a certificação AWS Cloud, buscando aliar a análise de dados com a escalabilidade da
+                    computação em nuvem.
+                </p>
+                    <br>
+                <p> Acredito que a união entre dados, gestão e responsabilidade social é o caminho para criar soluções
+                    sustentáveis e reduzir desigualdades. Tenho como propósito crescer profissionalmente contribuindo
+                    com análises que gerem valor real para pessoas e instituições.
+                </p>
+                    <br>
 
 
                 </p>
-               
+
             </section>
 
             <section id="trabalho">
                 <h2>Habilidades</h2>
                 <div class="skills-tag">
-                    
+
                     <span class="tag">PYTHON</span>
                     <span class="tag">HTML5 / CSS3</span>
                     <span class="tag">GESTÃO DE PROJETOS</span>
@@ -248,75 +274,87 @@
             </section>
 
 
-    <section id="Formacoes">
-        <h2>Formações</h2>
-        <p style="color: var(--texto-light); margin-bottom: 20px;">
-<div>
-<strong> Curso Superior de Tecnologia (CST) - FATEC JUNDIAÍ - FATEC Jundiaí </strong>
-<p> Março de 2025 - Março de 2028 </p>
+            <section id="Formacoes">
+                <h2>Formações</h2>
+                <p style="color: var(--texto-light); margin-bottom: 20px;">
+                <div>
+                    <strong> Curso Superior de Tecnologia (CST) - FATEC JUNDIAÍ - FATEC Jundiaí </strong>
+                    <p> Março de 2025 - Março de 2028 </p>
 
 
-</div>
+                </div>
             </section>
 
 
             <section id="pesquisas">
-  
-    <h2>Pesquisas</h2>
-    <p style="color: var(--texto-light); margin-bottom: 20px;"></p>
-<div>
 
-        <b> Racismo, preconceito ou violência psicológica e física: a margem jurídica e dados representativos no brasil. </b>
-      
-   <p style="margin-bottom: 20px;"> Acesse a pagina do projeto e acompanhe os indicadores e dashboard desse projeto </p>
+                <h2>Pesquisas</h2>
+                <p style="color: var(--texto-light); margin-bottom: 20px;"></p>
+                <div>
 
-<a href="Pesquisas.html" class="botao-link">
-  Clique aqui para acompanhar...
-</a>
+                    <b> Racismo, preconceito ou violência psicológica e física: a margem jurídica e dados
+                        representativos no brasil. </b>
 
-</div>
+                    <p style="margin-bottom: 20px;"> Acesse a pagina do projeto e acompanhe os indicadores e dashboard
+                        desse projeto </p>
 
-</section>
-                
-       <section id="certificacoes">
+                    <a href="Pesquisas.html" class="botao-link">
+                        Clique aqui para acompanhar...
+                    </a>
 
-        <h2>Certificações</h2>
-        <p style="color: var(--texto-light); margin-bottom: 20px;">
+                </div>
 
-        <div>
-<ul>
-  <li>Python essentials 1 / Cisco Networking Academy</li>
-  <li>Especialização Técnica em Gestão de Projetos / ETEC CEPAM</li>
-  <li>Artificial Intelligence Fundamentals with Capstone Project / IBM</li>
-</ul>
+            </section>
 
-</div>
-      
-</section>
+            <section id="certificacoes">
 
- <section id="formulario">
-   <h2>Contato</h2>
-        <p style="color: var(--texto-light); margin-bottom: 20px;">
-<div>
-<iframe width="640px" height="480px" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?								id=veJyzyt6g0e96znVewf3b4DlQKuDNHhHvd9OJEMolGtUNkxRUERaWE9JQ0VZNDhORk5GTk9QNjQ3RS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" 		style="border:none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-</div>
-</section>
-        <footer id="contato" style="text-align: center; padding: 60px 0;">
-            <p style="color: var(--texto-light);">Entre em contato para uma conversa</p>
-            <div style="margin-top: 20px;">
-                <a href="https://www.linkedin.com/in/israel-barros-44a453308/" style="color: var(--verde-primario); font-weight: 700; text-decoration: none; margin: 0 10px;">LinkedIn</a>
-                <a href="https://www.instagram.com/grandisra/" style="color: var(--verde-primario); font-weight: 700; text-decoration: none; margin: 0 10px;">Instagram</a>
-                <a href="https://github.com/bigisra" style="color: var(--verde-primario); font-weight: 700; text-decoration: none; margin: 0 10px;">GitHub</a>
-                <a href="https://wwws.cnpq.br/cvlattesweb/PKG_MENU.menu?f_cod=4D17A1726D099B2C1711B4879AD02448#" style="color: var(--verde-primario); font-weight: 700; text-decoration: none; margin: 0 10px;">Curriculo Lattes</a>
-            </div>
-            </div>
+                <h2>Certificações</h2>
+                <p style="color: var(--texto-light); margin-bottom: 20px;">
+
+                <div>
+                    <ul>
+                        <li>Python essentials 1 / Cisco Networking Academy</li>
+                        <li>Especialização Técnica em Gestão de Projetos / ETEC CEPAM</li>
+                        <li>Artificial Intelligence Fundamentals with Capstone Project / IBM</li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+            <section id="formulario">
+                <h2>Contato</h2>
+                <p style="color: var(--texto-light); margin-bottom: 20px;">
+                <div>
+                    <iframe width="640px" height="480px"
+                        src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?								id=veJyzyt6g0e96znVewf3b4DlQKuDNHhHvd9OJEMolGtUNkxRUERaWE9JQ0VZNDhORk5GTk9QNjQ3RS4u&embed=true"
+                        frameborder="0" marginwidth="0" marginheight="0"
+                        style="border:none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen
+                        mozallowfullscreen msallowfullscreen> </iframe>
+                </div>
+            </section>
+            <footer id="contato" style="text-align: center; padding: 60px 0;">
+                <p style="color: var(--texto-light);">Entre em contato para uma conversa</p>
+                <div style="margin-top: 20px;">
+                    <a href="https://www.linkedin.com/in/israel-barros-44a453308/"
+                        style="color: var(--verde-primario); font-weight: 700; text-decoration: none; margin: 0 10px;">LinkedIn</a>
+                    <a href="https://www.instagram.com/grandisra/"
+                        style="color: var(--verde-primario); font-weight: 700; text-decoration: none; margin: 0 10px;">Instagram</a>
+                    <a href="https://github.com/bigisra"
+                        style="color: var(--verde-primario); font-weight: 700; text-decoration: none; margin: 0 10px;">GitHub</a>
+                    <a href="https://wwws.cnpq.br/cvlattesweb/PKG_MENU.menu?f_cod=4D17A1726D099B2C1711B4879AD02448#"
+                        style="color: var(--verde-primario); font-weight: 700; text-decoration: none; margin: 0 10px;">Curriculo
+                        Lattes</a>
+                </div>
+        </div>
         </footer>
     </div>
 
-     <!-- Link para o JavaScript do Bootstrap (CDN) - antes de </body> -->
+    <!-- Link para o JavaScript do Bootstrap (CDN) - antes de </body> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
