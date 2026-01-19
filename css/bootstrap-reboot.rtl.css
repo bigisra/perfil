@@ -513,11 +513,12 @@ select:disabled {
 }
 
 button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  appearance: button;
 }
+
 button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
@@ -572,10 +573,12 @@ legend + * {
   height: auto;
 }
 
-[type=search] {
+input[type="search"] {
+  appearance: textfield;
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
+
 [type=search]::-webkit-search-cancel-button {
   cursor: pointer;
   filter: grayscale(1);
@@ -602,8 +605,10 @@ legend + * {
 
 ::file-selector-button {
   font: inherit;
+  appearance: button;
   -webkit-appearance: button;
 }
+
 
 output {
   display: inline-block;
