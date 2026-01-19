@@ -2366,7 +2366,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #1e30f3;
+  background-color: #58bf6de1;
   border: 0;
   border-radius: 1rem;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2381,7 +2381,7 @@ textarea.form-control-lg {
   }
 }
 .form-range::-moz-range-thumb:active {
-  background-color: #bcc1fb;
+  background-color: #5aa57c;
 }
 .form-range::-moz-range-track {
   width: 100%;
