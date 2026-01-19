@@ -353,8 +353,9 @@ select:disabled {
 button,
 [type=button],
 [type=reset],
-[type=submit] {
-  -webkit-appearance: button;
+input[type=submit]{
+  appearance:button;
+  -webkit-appearance:button;
 }
 button:not(:disabled),
 [type=button]:not(:disabled),
@@ -411,9 +412,11 @@ legend + * {
 }
 
 [type=search] {
+  appearance: textfield;
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
+
 [type=search]::-webkit-search-cancel-button {
   cursor: pointer;
   filter: grayscale(1);
@@ -442,8 +445,10 @@ legend + * {
 
 ::file-selector-button {
   font: inherit;
+  appearance: button;
   -webkit-appearance: button;
 }
+
 
 output {
   display: inline-block;
@@ -2264,19 +2269,17 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   background-color: var(--bs-form-check-bg);
   background-image: var(--bs-form-check-bg-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   border: var(--bs-border-width) solid var(--bs-border-color);
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
   print-color-adjust: exact;
-}
+
 .form-check-input[type=checkbox] {
   border-radius: 0.25em;
 }
@@ -11910,6 +11913,7 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
 }
 }
 /*# sourceMappingURL=bootstrap.css.map *
